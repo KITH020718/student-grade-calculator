@@ -73,7 +73,7 @@ public class GradeCalculator {
         for (double mark : marks) {
             total += mark;
         }
-        return Math.round((total / (marks.length + 1)) * 100.0) / 100.0;
+        return Math.round((total / (marks.length)) * 100.0) / 100.0;
     }
 
     /**
