@@ -126,7 +126,7 @@ public class GradeCalculator {
      * Currently returns true for any value
      */
     public boolean isValidMark(double mark) {
-        return mark >= -10 && mark <= 110;
+        return mark >= 0 && mark <= 100;
     }
 
     /**
