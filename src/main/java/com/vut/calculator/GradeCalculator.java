@@ -48,8 +48,6 @@ public class GradeCalculator {
             return "Credit";
         } else if (finalMark >= 50) {
             return "Pass";
-        }else if (finalMark >= 45) {
-            return "Supplementary";
         } else {
             return "Fail";
         }
@@ -89,11 +87,11 @@ public class GradeCalculator {
         }
         int passCount = 0;
         for (double mark : finalMarks) {
-            if (mark >= 55) {
+            if (mark >= 50) {
                 passCount++;
             }
         }
-        return Math.round(((double) passCount / finalMarks.length) * 100.0) / 100.0;
+        return Math.round(((double) passCount / finalMarks.length) * 100.0);
     }
 
     /**
