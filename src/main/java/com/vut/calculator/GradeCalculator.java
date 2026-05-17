@@ -141,7 +141,7 @@ public class GradeCalculator {
         report.append("Semester Mark: ").append(semesterMark).append("\n");
 
         // BUG: Condition is inverted - shows ADMITTED when NOT admitted
-        if (!hasExamAdmission(semesterMark)) {
+        if (hasExamAdmission(semesterMark)) {
             report.append("Exam Admission: ADMITTED\n");
             report.append("Exam Mark: ").append(examMark).append("\n");
             double finalMark = calculateFinalMark(semesterMark, examMark);
