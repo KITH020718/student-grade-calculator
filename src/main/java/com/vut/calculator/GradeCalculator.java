@@ -61,7 +61,7 @@ public class GradeCalculator {
      * Should require >= 40 for exam admission, but uses >= 45
      */
     public boolean hasExamAdmission(double semesterMark) {
-        return semesterMark >= 45;
+        return semesterMark >= 40;
     }
 
     /**
