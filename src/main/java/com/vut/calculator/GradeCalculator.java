@@ -104,7 +104,7 @@ public class GradeCalculator {
         }
         double highest = marks[0];
         for (int i = 1; i < marks.length; i++) {
-            if (marks[i] < highest) {
+            if (marks[i] > highest) {
                 highest = marks[i];
             }
         }
