@@ -117,7 +117,7 @@ public class GradeCalculator {
      * between 45 and 49 (inclusive), but this method checks 40-44
      */
     public boolean qualifiesForSupplementary(double finalMark) {
-        return finalMark >= 40 && finalMark <= 44;
+        return finalMark >= 45 && finalMark <= 49;
     }
 
     /**
