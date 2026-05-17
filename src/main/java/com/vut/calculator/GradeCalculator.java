@@ -29,7 +29,7 @@ public class GradeCalculator {
      * but the weights are reversed here.
      */
     public double calculateFinalMark(double semesterMark, double examMark) {
-        double finalMark = (semesterMark * 0.6) + (examMark * 0.4);
+        double finalMark = (semesterMark * 0.4) + (examMark * 0.6);
         return Math.round(finalMark * 100.0) / 100.0;
     }
 
