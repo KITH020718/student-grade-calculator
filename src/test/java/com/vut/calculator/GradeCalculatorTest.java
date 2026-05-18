@@ -168,9 +168,12 @@ public class GradeCalculatorTest {
     public void testClassAverage_FiveStudents() {
         // YOUR CODE HERE — use marks: 45, 55, 65, 75, 85
         // Expected average: 65.0
-        fail("TODO: Implement this test");
-    }
+        double[] marks = {45, 55, 65, 75, 85};
 
+       assertEquals(65.0, calculator.calculateClassAverage(marks), 0.01);
+        //fail("TODO: Implement this test");
+    }
+ 
     // =====================================================================
     // TEST GROUP 5: Pass Rate Calculation
     // Pass = final mark >= 50
