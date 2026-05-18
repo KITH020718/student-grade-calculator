@@ -91,7 +91,8 @@ public class GradeCalculator {
                 passCount++;
             }
         }
-        return Math.round(((double) passCount / finalMarks.length) * 100.0);
+        //return Math.round((double) passCount / finalMarks.length);
+        return (double) passCount / finalMarks.length;
     }
 
     /**
