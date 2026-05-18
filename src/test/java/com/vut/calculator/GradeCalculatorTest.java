@@ -197,8 +197,11 @@ public class GradeCalculatorTest {
     // TODO: Write a test for pass rate where no students pass
     @Test
     public void testPassRate_NonePass() {
-        // YOUR CODE HERE
-        fail("TODO: Implement this test");
+        double[] marks = {10, 20, 30, 40};
+
+    // 0 out of 4 students pass
+        assertEquals(0.0, calculator.calculatePassRate(marks), 0.01);
+        //fail("TODO: Implement this test");
     }
 
     // =====================================================================
