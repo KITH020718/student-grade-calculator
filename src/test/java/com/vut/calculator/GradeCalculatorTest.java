@@ -136,7 +136,8 @@ public class GradeCalculatorTest {
     @Test
     public void testExamAdmission_Between40And45() {
         // YOUR CODE HERE
-        fail("TODO: Implement this test");
+        assertTrue(calculator.hasExamAdmission(42));
+        //fail("TODO: Implement this test");
     }
 
     // =====================================================================
