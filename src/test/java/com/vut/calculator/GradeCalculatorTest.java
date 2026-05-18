@@ -292,7 +292,7 @@ public class GradeCalculatorTest {
     // TODO: Write a test for mark value of 105 (should be invalid)
     @Test
     public void testValidMark_WayOver100() {
-        // YOUR CODE HERE
-        fail("TODO: Implement this test");
+        assertFalse(calculator.isValidMark(105));
+        //fail("TODO: Implement this test");
     }
 }
