@@ -223,8 +223,10 @@ public class GradeCalculatorTest {
     // TODO: Write a test where highest mark is at the beginning of the array
     @Test
     public void testHighestMark_FirstElement() {
-        // YOUR CODE HERE
-        fail("TODO: Implement this test");
+        double[] marks = {99, 85, 70, 60};
+
+    assertEquals(99.0, calculator.findHighestMark(marks), 0.01);
+        //fail("TODO: Implement this test");
     }
 
     // =====================================================================
