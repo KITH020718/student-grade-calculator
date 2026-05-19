@@ -1,4 +1,4 @@
-# Step 1: Build stage
+# ===== Build Stage =====
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 WORKDIR /app
@@ -7,13 +7,11 @@ COPY . .
 
 RUN mvn clean package -DskipTests
 
-# Step 2: Run stage
-FROM eclipse-temurin:21-jdk
+# ===== Run Stage =====
+FROM tomcat:9.0-jdk21
 
-WORKDIR /app
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
