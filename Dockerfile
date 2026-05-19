@@ -1,14 +1,19 @@
-FROM tomcat:9.0-jdk21
+# Step 1: Build stage
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
-# Remove default apps
-RUN rm -rf /usr/local/tomcat/webapps/*
+WORKDIR /app
 
-# Copy WAR into Tomcat ROOT (so it runs on /)
-COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+COPY . .
 
-# Limit memory for Render free tier (512MB)
-ENV JAVA_OPTS="-Xmx256m"
+RUN mvn clean package -DskipTests
+
+# Step 2: Run stage
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /app
+
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
