@@ -1,3 +1,5 @@
+https://student-grade-calculator-3378.onrender.com/
+
 # VUT Student Grade Calculator
 
 ## ASSDX4A DevOps Practical Assessment – Semester 1, 2026
